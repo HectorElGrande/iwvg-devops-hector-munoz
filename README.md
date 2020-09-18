@@ -4,6 +4,7 @@
 
 ###Estado del código
 [![Build Status](https://travis-ci.org/HectorElGrande/iwvg-devops-hector-munoz.svg?branch=master)](https://travis-ci.org/HectorElGrande/iwvg-devops-hector-munoz)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=es.upm.miw%3Aiwvg-devops-hector-munoz&metric=alert_status)](https://sonarcloud.io/dashboard?id=es.upm.miw%3Aiwvg-devops-hector-munoz)
 
 ### :gear: Instalación del proyecto
 1. Clonar el repositorio en tu equipo, **mediante consola**:
