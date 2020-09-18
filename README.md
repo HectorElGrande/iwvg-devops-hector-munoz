@@ -2,7 +2,7 @@
 ## Ingeniería Web: Visión General (IWVG) DevOps
 > Este proyecto es una Plantilla de apoyo docente de la asignatura.
 
-###Estado del código
+### Estado del código
 [![Build Status](https://travis-ci.org/HectorElGrande/iwvg-devops-hector-munoz.svg?branch=master)](https://travis-ci.org/HectorElGrande/iwvg-devops-hector-munoz)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=es.upm.miw%3Aiwvg-devops-hector-munoz&metric=alert_status)](https://sonarcloud.io/dashboard?id=es.upm.miw%3Aiwvg-devops-hector-munoz)
 [![BCH compliance](https://bettercodehub.com/edge/badge/HectorElGrande/iwvg-devops-hector-munoz?branch=master)](https://bettercodehub.com/)
