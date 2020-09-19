@@ -9,10 +9,14 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class FractionTest {
 
     Fraction fraction;
+    Fraction fraction1;
+    Fraction fractionResult;
 
     @BeforeEach
     void execute() {
         fraction = new Fraction(3, 4);
+        fraction1 = new Fraction(6, 8);
+        fractionResult = new Fraction();
     }
 
     @Test
@@ -40,6 +44,36 @@ public class FractionTest {
     @Test
     void testDecimal() {
         assertEquals(0.75, fraction.decimal());
+    }
+
+    @Test
+    void testIsProper() {
+        assertEquals(true, fraction.isProper());
+    }
+
+    @Test
+    void testIsImproper() {
+        assertEquals(false, fraction.isImproper());
+    }
+
+    @Test
+    void testIsEquivalent() {
+        assertEquals(true, fraction.isEquivalent(fraction1));
+    }
+
+    @Test
+    void testAdd() {
+        assertEquals(new Fraction(3, 2).decimal(), fractionResult.add(fraction, fraction1).decimal());
+    }
+
+    @Test
+    void testMultiply() {
+        assertEquals(new Fraction(9, 16).decimal(), fractionResult.multiply(fraction, fraction1).decimal());
+    }
+
+    @Test
+    void testDivide() {
+        assertEquals(1.0, fractionResult.divide(fraction, fraction1).decimal());
     }
 
     @Test
