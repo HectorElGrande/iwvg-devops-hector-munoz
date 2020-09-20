@@ -28,4 +28,14 @@ public class Searches {
                 .map(user -> user.getFamilyName().charAt(0)+".");
     }
 
+    public Fraction findFirstFractionSubtractionByUserName(String name){
+        return new UsersDatabase().findAll()
+                .filter(user -> user.getName().equals(name))
+                .map(user -> user.getFractions())
+                .flatMap(fractions -> fractions.stream())
+                .limit(2)
+                .reduce((fraction, fraction2) -> fraction.subtraction(fraction, fraction2))
+                .get();
+    }
+
 }

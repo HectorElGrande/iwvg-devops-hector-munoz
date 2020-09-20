@@ -78,6 +78,13 @@ public class Fraction {
         return frFinal;
     }
 
+    public Fraction subtraction(Fraction fraction1, Fraction fraction2){
+        int num=fraction1.numerator*fraction2.denominator-fraction2.numerator*fraction1.denominator;
+        int den=fraction1.denominator*fraction2.denominator;
+        Fraction fractionFinal = new Fraction(num,den);
+        return fractionFinal;
+    }
+
     public Fraction multiply(Fraction fraction1, Fraction fraction2) {
         int numerator = fraction1.getNumerator() * fraction2.getNumerator();
         int denominator = fraction1.getDenominator() * fraction2.getDenominator();

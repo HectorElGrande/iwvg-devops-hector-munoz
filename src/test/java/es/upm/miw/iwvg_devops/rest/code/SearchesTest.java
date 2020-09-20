@@ -29,4 +29,12 @@ public class SearchesTest {
                 .collect(Collectors.toList()));
     }
 
+    @Test
+    void testFindFirstFractionSubtractionByUserName(){
+        assertEquals("Fraction{" +
+                "numerator=" + 11 +
+                ", denominator=" + 5 +
+                '}', new Searches().findFirstFractionSubtractionByUserName("Ana").toString());
+    }
+
 }
