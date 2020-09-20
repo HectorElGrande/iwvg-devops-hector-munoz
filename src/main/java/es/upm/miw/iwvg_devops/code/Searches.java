@@ -10,7 +10,7 @@ public class Searches {
                 .flatMap(fractions -> fractions.stream())
                 .filter(fraction -> fraction.getDenominator() != 0)
                 .reduce((f1, f2) -> f1.fractionIsHigher(f1, f2))
-                .get();
+                .orElse(null);
     }
 
     public Stream<Double> findDecimalFractionByUserName(String name){
@@ -35,7 +35,7 @@ public class Searches {
                 .flatMap(fractions -> fractions.stream())
                 .limit(2)
                 .reduce((fraction, fraction2) -> fraction.subtraction(fraction, fraction2))
-                .get();
+                .orElse(null);
     }
 
 }
