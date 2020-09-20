@@ -21,4 +21,11 @@ public class Searches {
                 .map(fraction -> fraction.decimal());
     }
 
+    public Stream<String> findUserFamilyNameInitialByAnyProperFraction(){
+        return new UsersDatabase().findAll()
+                .filter(user -> user.getFractions().stream()
+                        .anyMatch(fraction -> fraction.getNumerator() < fraction.getDenominator()))
+                .map(user -> user.getFamilyName().charAt(0)+".");
+    }
+
 }
