@@ -59,37 +59,41 @@ public class Fraction {
         return (double) numerator / denominator;
     }
 
-    public boolean isProper(){
+    public boolean isProper() {
         return this.getNumerator() < this.getDenominator();
     }
 
-    public boolean isImproper(){
+    public boolean isImproper() {
         return this.getNumerator() > this.getDenominator();
     }
 
-    public boolean isEquivalent(Fraction fraction1){
-        return this.getNumerator()*fraction1.getDenominator()==this.getDenominator()*fraction1.getNumerator();
+    public boolean isEquivalent(Fraction fraction1) {
+        return this.getNumerator() * fraction1.getDenominator() == this.getDenominator() * fraction1.getNumerator();
     }
 
-    public Fraction add(Fraction fraction1, Fraction fraction2){
-        int numerator=fraction1.numerator*fraction2.denominator+fraction2.numerator*fraction1.denominator;
-        int denominator=fraction1.denominator*fraction2.denominator;
-        Fraction frFinal = new Fraction(numerator,denominator);
+    public Fraction add(Fraction fraction1, Fraction fraction2) {
+        int numerator = fraction1.numerator * fraction2.denominator + fraction2.numerator * fraction1.denominator;
+        int denominator = fraction1.denominator * fraction2.denominator;
+        Fraction frFinal = new Fraction(numerator, denominator);
         return frFinal;
     }
 
-    public Fraction multiply(Fraction fraction1, Fraction fraction2){
-        int numerator=fraction1.getNumerator()*fraction2.getNumerator();
-        int denominator=fraction1.getDenominator()*fraction2.getDenominator();
-        Fraction fractionResult = new Fraction(numerator,denominator);
+    public Fraction multiply(Fraction fraction1, Fraction fraction2) {
+        int numerator = fraction1.getNumerator() * fraction2.getNumerator();
+        int denominator = fraction1.getDenominator() * fraction2.getDenominator();
+        Fraction fractionResult = new Fraction(numerator, denominator);
         return fractionResult;
     }
 
-    public Fraction divide(Fraction fraction1, Fraction fraction2){
-        int numerator=fraction1.getNumerator()*fraction2.getDenominator();
-        int denominator=fraction1.getDenominator()*fraction2.getNumerator();
-        Fraction frFinal = new Fraction(numerator,denominator);
+    public Fraction divide(Fraction fraction1, Fraction fraction2) {
+        int numerator = fraction1.getNumerator() * fraction2.getDenominator();
+        int denominator = fraction1.getDenominator() * fraction2.getNumerator();
+        Fraction frFinal = new Fraction(numerator, denominator);
         return frFinal;
+    }
+
+    public Fraction fractionIsHigher(Fraction f1, Fraction f2) {
+        return (f1.decimal() > f2.decimal()) ? f1 : f2;
     }
 
     @Override
